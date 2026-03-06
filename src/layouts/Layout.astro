@@ -3,6 +3,7 @@ import "../styles/animations.css"
 import "../styles/global.css"
 import "../styles/utilities.css"
 import "../styles/variables.css"
+import Navbar from "../components/navbar/Navbar.astro";
 ---
 
 <!doctype html>
@@ -26,12 +27,22 @@ import "../styles/variables.css"
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
           rel="stylesheet">
+
 </head>
 
 <body>
-<slot/>
+<header class="header">
+    <Navbar/>
+</header>
+<main class="horizontal-center">
+    <slot/>
+</main>
 </body>
 </html>
 
 <style>
+    .header {
+        background: var(--background-secondary);
+        border-bottom: 1px solid var(--light-border-color);
+    }
 </style>
