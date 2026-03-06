@@ -1,0 +1,100 @@
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Layout and Formatting */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.section-container {
+    max-width: 1200px;
+    width: 95vw;
+    background: var(--background-secondary);
+    border-radius: 12px;
+}
+
+.horizontal-center {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-padding {
+    padding: 1vw;
+}
+
+.bottom-padding-3 {
+    padding-bottom: 3%;
+}
+
+.vertical-padding-5 {
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.vertical-margin-1 {
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+.light-border {
+    border: 1px solid var(--light-border-color);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Flexbox helpers */
+/* ------------------------------------------------------------------------------------------------------------------ */
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-vertical-center {
+    display: flex;
+    align-items: center;
+}
+
+.flex-row-space-between-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ------------------------------------------------------------------------------------------------------------------ */
+/* Text */
+/* ------------------------------------------------------------------------------------------------------------------ */
+
+.bold {
+    font-weight: bold;
+}
+
+.text {
+    font-size: 1.2rem;
+}
+
+@media (min-width: 900px) {
+    .text {
+        font-size: 2.4rem;
+    }
+}
+
+.header-font-size {
+    font-size: 2.4rem;
+}
+
+@media (min-width: 900px) {
+    .header-font-size {
+        font-size: 3rem;
+    }
+}
+
+.section-header {
+    border-left: 0.18em solid var(--color-secondary);
+    font-weight: bold;
+    padding-left: 0.18em;
+}
+
+.text-highlight-primary {
+    color: var(--color-primary);
+}
