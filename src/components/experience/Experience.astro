@@ -1,0 +1,77 @@
+---
+import ExperienceItem from "./ExperienceItem.astro";
+
+const experiences = [
+    {
+        jobPosition: "Software Development Intern",
+        dates: "December 2024 – Present",
+        workplace: "Cleveland Clinic",
+        city: "Cleveland, OH",
+        bulletPoints: [
+            "Collaborate with other interns and developers in an Agile environment to build a user-friendly application\n" +
+            "configuration tool for the radiology department that streamlines application configuration, making the process\n" +
+            "faster, easier, and less error prone.",
+            "Work in a team environment to develop an Angular/.NET application that allows medical professionals to visualize\n" +
+            "AI model interpretations and outputs for medical diagnostics.",
+            "Partnered with the Cleveland Clinic Medical 3D Printing Lab to engineer a custom full-stack web application to\n" +
+            "replace problematic third-party tools with a more reliable and effective solution."
+        ]
+    },
+    {
+        jobPosition: "Undergraduate Researcher",
+        dates: "May 2024 – August 2024",
+        workplace: "John Carroll University",
+        city: "Cleveland, OH",
+        bulletPoints: [
+            "Developed a Python-based tool to automate shortest distance calculations within graphs, greatly reducing the\n" +
+            "need for manual computations and significantly enhancing the productivity and efficiency of research group.",
+            "Collaborated with faculty and undergraduate peers to formalize and prove pursuit-evasion theorems in graph\n" +
+            "theory.",
+            "Mentored and introduced high school students to mathematical research in graph theory."
+        ]
+    },
+    {
+        jobPosition: "Peer Learning Facilitator",
+        dates: "September 2024 – January 2025",
+        workplace: "John Carroll University",
+        city: "Cleveland, OH",
+        bulletPoints: [
+            "Provided personalized tutoring in mathematics and computer science to enhance student understanding and " +
+            "academic performance."
+        ]
+    },
+    {
+        jobPosition: "Teaching Assistant/Grader",
+        dates: "January 2024 – May 2025",
+        workplace: "John Carroll University",
+        city: "Cleveland, OH",
+        bulletPoints: [
+            "Assisted faculty teaching Database Systems by grading assignments and helping students understand " +
+            "concepts relating to SQL and relational database design.",
+            "Assisted faculty teaching Web Programming by grading assignments and helping students understand HTML, " +
+            "CSS, JavaScript, and other modern web technologies."
+        ]
+    }
+];
+---
+<section id="experience" class="section-container light-border horizontal-center border-bottom container-padding vertical-margin-1">
+    <div class="bottom-padding-3">
+        <h1 class="section-header header-font-size">
+            Experience
+        </h1>
+    </div>
+
+    <section>
+        {experiences.map(exp => (
+                <section class="bottom-padding-3">
+                    <ExperienceItem
+                            jobPosition={exp.jobPosition}
+                            dates={exp.dates}
+                            workplace={exp.workplace}
+                            city={exp.city}
+                            bulletPoints={exp.bulletPoints}
+                    />
+                </section>
+        ))}
+    </section>
+</section>

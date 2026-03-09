@@ -1,0 +1,49 @@
+---
+interface Props {
+    jobPosition: string;
+    dates: string;
+    workplace: string;
+    city: string;
+    bulletPoints: string[];
+}
+
+const { jobPosition, city, workplace, dates, bulletPoints } = Astro.props;
+---
+
+<section class="flex-column fade-in">
+    <div class="flex-row-space-between-wrap text-highlight-primary text bold">
+        <div>
+            {jobPosition}
+        </div>
+
+        <div>
+            {dates}
+        </div>
+    </div>
+
+    <div class="flex-row-space-between-wrap text bold">
+        <div>
+            {workplace}
+        </div>
+
+        <div>
+            {city}
+        </div>
+    </div>
+
+    {bulletPoints.length > 0 && (
+            <ul>
+                {bulletPoints.map(bullet => (
+                        <li class="bullet-point">{bullet}</li>
+                ))}
+            </ul>
+    )}
+</section>
+
+<style>
+    .bullet-point {
+        font-size: 1.2rem;
+        margin-top: 1.2%;
+        margin-bottom: 1.2%;
+    }
+</style>
