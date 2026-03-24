@@ -1,0 +1,69 @@
+---
+import ProjectItem from './ProjectItem.astro';
+
+const projects = [
+    {
+        name: 'Pi Approximation Methods',
+        projectUrl: 'https://pi-approximation-methods-web-app.pages.dev/',
+        imageLocation: '/pi-project.png',
+        imageAlt: 'Pi Project',
+        projectDescription: 'Pi Approximation Methods is an application that allows users to visualize and learn ' +
+            'about historical and modern pi approximation methods.',
+        repoUrl: ''
+    },
+    {
+        name: 'Happy Scheduling!',
+        projectUrl: 'https://happy-scheduling.pages.dev/',
+        imageLocation: ' /happy-scheduling-project.png',
+        imageAlt: 'Happy Scheduling Project',
+        projectDescription: 'Happy Scheduling! is an application that computes optimal interview schedules using ' +
+            'mathematical optimization/linear programming. It was developed in collaboration with a mathematics ' +
+            'professor as a non-university affiliated project for personal and potential use by University ' +
+            'Hospitals’ pharmacy residency program for interviews.',
+        repoUrl: ''
+    }
+];
+---
+<section id="projects" class="section-container horizontal-center light-border container-padding vertical-margin-1">
+    <div class="bottom-padding-3">
+        <h1 class="section-header header-font-size">
+            Projects
+        </h1>
+    </div>
+
+    <div class="projects-container flex-row flex-wrap flex-space-around horizontal-gap">
+        {projects.map(project => (
+                <ProjectItem
+                        name={project.name}
+                        projectUrl={project.projectUrl}
+                        imageLocation={project.imageLocation}
+                        imageAlt={project.imageAlt}
+                        projectDescription={project.projectDescription}
+                        repoUrl={project.repoUrl}
+                >
+                    <img src={project.imageLocation} alt={project.imageAlt}/>
+                </ProjectItem>
+        ))}
+    </div>
+</section>
+
+<style>
+    img {
+        max-width: 100%;
+        object-fit: contain;
+        border-radius: 12px;
+    }
+
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    @media (min-width: 900px) {
+        .projects-container {
+            flex-direction: row;
+        }
+    }
+</style>

@@ -1,0 +1,53 @@
+---
+interface Props {
+    name: string;
+    projectUrl: string;
+    imageLocation: string;
+    imageAlt: string;
+    projectDescription: string;
+    repoUrl: string;
+}
+
+const {name,projectUrl, projectDescription, repoUrl} = Astro.props;
+---
+
+<div class="project-item-container">
+    <a href={projectUrl} target="_blank">
+        <slot />
+    </a>
+    <section class="project-info horizontal-center">
+        <h1 class="project-header">{name}</h1>
+        <p class="project-description">{projectDescription}</p>
+        <p class="bold">
+            <a href={projectUrl} target="_blank">Project</a> |
+            <a href={repoUrl} target="_blank">Repository</a>
+        </p>
+    </section>
+</div>
+
+<style>
+    .project-item-container {
+        border: clamp(4px, 1vw, 6px) solid var(--color-secondary);
+        margin-bottom: 3%;
+        border-radius: 12px;
+        padding: 3%;
+
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .project-info {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+
+    .project-header {
+        font-size: clamp(1rem, 2.5vw, 1.8em);
+    }
+
+    .project-description  {
+        flex-grow: 1;
+    }
+</style>

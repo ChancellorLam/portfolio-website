@@ -54,6 +54,16 @@
     align-items: center;
 }
 
+.flex-wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
 .flex-row-space-between-wrap {
     display: flex;
     flex-direction: row;
