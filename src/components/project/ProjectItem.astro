@@ -2,13 +2,12 @@
 interface Props {
     name: string;
     projectUrl: string;
-    imageLocation: string;
-    imageAlt: string;
+    techStack: string;
     projectDescription: string;
     repoUrl: string;
 }
 
-const {name,projectUrl, projectDescription, repoUrl} = Astro.props;
+const {name,projectUrl, techStack, projectDescription, repoUrl} = Astro.props;
 ---
 
 <div class="project-item-container">
@@ -17,6 +16,7 @@ const {name,projectUrl, projectDescription, repoUrl} = Astro.props;
     </a>
     <section class="project-info horizontal-center">
         <h1 class="project-header">{name}</h1>
+        <p class="bold">Tech Stack: {techStack}</p>
         <p class="project-description">{projectDescription}</p>
         <p class="bold">
             <a href={projectUrl} target="_blank">Project</a> |

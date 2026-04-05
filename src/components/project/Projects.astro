@@ -7,20 +7,22 @@ const projects = [
         projectUrl: 'https://pi-approximation-methods-web-app.pages.dev/',
         imageLocation: '/pi-project.png',
         imageAlt: 'Pi Project',
+        techStack: 'Angular, TypeScript, Java, Spring Boot',
         projectDescription: 'Pi Approximation Methods is an application that allows users to visualize and learn ' +
             'about historical and modern pi approximation methods.',
-        repoUrl: ''
+        repoUrl: 'https://github.com/ChancellorLam/pi-approximation-methods-web-app/'
     },
     {
         name: 'Happy Scheduling!',
         projectUrl: 'https://happy-scheduling.pages.dev/',
         imageLocation: ' /happy-scheduling-project.png',
         imageAlt: 'Happy Scheduling Project',
+        techStack: 'Angular, TypeScript',
         projectDescription: 'Happy Scheduling! is an application that computes optimal interview schedules using ' +
             'mathematical optimization/linear programming. It was developed in collaboration with a mathematics ' +
             'professor as a non-university affiliated project for personal and potential use by University ' +
             'Hospitals’ pharmacy residency program for interviews.',
-        repoUrl: ''
+        repoUrl: 'https://github.com/ChancellorLam/happy-scheduling/'
     }
 ];
 ---
@@ -36,8 +38,7 @@ const projects = [
                 <ProjectItem
                         name={project.name}
                         projectUrl={project.projectUrl}
-                        imageLocation={project.imageLocation}
-                        imageAlt={project.imageAlt}
+                        techStack={project.techStack}
                         projectDescription={project.projectDescription}
                         repoUrl={project.repoUrl}
                 >
