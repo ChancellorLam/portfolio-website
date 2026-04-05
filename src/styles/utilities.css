@@ -3,7 +3,7 @@
 /* ------------------------------------------------------------------------------------------------------------------ */
 .section-container {
     max-width: 1200px;
-    width: 95vw;
+    width: 90vw;
     background: var(--background-secondary);
     border-radius: 12px;
 }
@@ -14,7 +14,7 @@
 }
 
 .container-padding {
-    padding: 1vw;
+    padding: 2.4rem;
 }
 
 .bottom-padding-3 {
